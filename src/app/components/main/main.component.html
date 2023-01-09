@@ -1,0 +1,48 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button>
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Movie App</span>
+  <span class="spacer"></span>
+  <button mat-icon-button>
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button mat-icon-button>
+    <mat-icon>share</mat-icon>
+  </button>
+</mat-toolbar>
+<div class="container">
+  <mat-checkbox #checkedOr [checked]="isChecked" (change)="onPressed($event)">
+    Select Your Department
+  </mat-checkbox>
+  <div *ngIf="checkedOr.checked">Hello Checkbox</div>
+  <div class="div">
+    <mat-radio-group>
+      <mat-radio-button>Male</mat-radio-button>
+      <mat-radio-button>Female</mat-radio-button>
+    </mat-radio-group>
+  </div>
+  <div class="">
+    <mat-select>
+      <mat-option *ngFor="let item of colors" [value]="item.id">
+        {{ item.name }}
+      </mat-option>
+    </mat-select>
+  </div>
+  <div>
+    <mat-tab-group>
+      <mat-tab label="Basic"
+        >Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor commodi
+        reiciendis quibusdam est eius nam vero iusto veniam sequi laboriosam
+        consequatur cum, voluptatem autem fuga! In impedit provident fuga
+        voluptates.</mat-tab
+      >
+      <mat-tab label="Advanced"
+        >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla sit
+        delectus illo necessitatibus ex aspernatur ullam eius minima impedit,
+        quasi, reprehenderit iste quibusdam expedita molestias earum et veniam
+        nesciunt quo.</mat-tab
+      >
+    </mat-tab-group>
+  </div>
+</div>
